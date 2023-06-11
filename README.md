@@ -27,7 +27,7 @@
 
 ![image](https://github.com/Ajayakumarvn/Student-Project-Simple_Ui/assets/86411173/986980a2-d147-4fa9-afd0-9fe41e628aab)
 
-4.	WIFI Intrusion/Attack Detection System
+5.	WIFI Intrusion/Attack Detection System
 
 ![image](https://github.com/Ajayakumarvn/Student-Project-Simple_Ui/assets/86411173/b8022834-4708-462e-b342-90f0d79059ad)
 
