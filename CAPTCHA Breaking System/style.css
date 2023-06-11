@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #667db6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.card-wrapper {
+  width: 500px;
+  margin: auto;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+.card-wrapper h2 {
+  color: #ff4500;
+  margin: 10px 0 20px 0;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3em;
+}
+.form-group {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="file"] {
+  display: none;
+}
+
+.form-group .custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  background-color: #4c49f0;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.form-group .custom-file-upload:hover {
+  background-color: #0069d9;
+}
+
+.form-group .file-name {
+  margin-top: 10px;
+}
+
+.captcha-image {
+  display: none;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.captcha-result {
+  display: none;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #0069d9;
+}
+.res {
+  text-align: center;
+}

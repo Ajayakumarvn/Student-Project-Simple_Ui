@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Twitter Clone" />
+    <title>Twitter-Feed</title>
+    <link rel="icon" href="images/twitter.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css"
+      integrity="sha512-T3VL1q6jMUIzGLRB9z86oJg9PgF7A55eC2XkB93zyWSqQw3Ju+6IEJZYBfT7E9wOHM7HCMCOZSpcssxnUn6AeQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="row home">
+          <div class="col-3 left-bar">
+            <div style="position: fixed">
+              <i class="fa-brands fa-twitter mt-3"></i>
+              <p class="option">
+                <a><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+              </p>
+              <p class="option">
+                <a><i class="fa fa-hashtag" aria-hidden="true"></i> Explore</a>
+              </p>
+              <p class="option">
+                <a><i class="fa-regular fa-bell"></i> Notifications</a>
+              </p>
+              <p class="option">
+                <a><i class="fa-regular fa-envelope"></i> Messages</a>
+              </p>
+              <p class="option">
+                <a><i class="fa-regular fa-bookmark"></i> Bookmarks</a>
+              </p>
+              <p class="option">
+                <a><i class="fa fa-th-list" aria-hidden="true"></i> Lists</a>
+              </p>
+              <p class="option">
+                <a><i class="fa-regular fa-user"></i> Profile</a>
+              </p>
+              <p class="option">
+                <a><i class="fa-solid fa-spinner"></i>More</a>
+              </p>
+              <p class="option">
+                <a href="home.html" id="logoutBtn"
+                  ><i class="fa-solid fa-power-off"></i>logout</a
+                >
+              </p>
+              <button class="btn btn-lg btn-primary">Tweet</button>
+            </div>
+          </div>
+          <div class="col-5 feed">
+            <div class="header">
+              <h5>Home</h5>
+              <div class="d-flex ms-5">
+                <h6>For You</h6>
+              </div>
+            </div>
+            <div class="post">
+              <div class="avatar">
+                <img src="images/elon.jpg" />
+              </div>
+              <div class="textbox">
+                <textarea
+                  placeholder="Whats's happening?"
+                  rows="3"
+                  cols="50"
+                ></textarea>
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <!-- Link to open the modal -->
+                <a href="#ex1" rel="modal:open">
+                  <button class="btn">Tweet</button></a
+                >
+
+                <!-- Modal Code -->
+                <div id="ex1" class="modal">
+                  <div>
+                    <img
+                      src="images/warning.png"
+                      class="m-auto d-block mt-2 mb-3"
+                      width="50"
+                      alt="warning"
+                    />
+                  </div>
+                  <p class="text-danger fw-bold" style="text-align: justify">
+                    The post you are trying to share cannot be posted because it
+                    violates Twitter's cyberbullying policies. We prioritize
+                    maintaining a safe and respectful environment for all users.
+                    If you have any questions or concerns, please review our
+                    community guidelines or contact our support team for further
+                    assistance. Thank you for your understanding.
+                  </p>
+                  <!-- <a href="#" rel="modal:close">Close</a> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="tweets">
+              <div
+                class="profile-pic d-flex justify-content-start align-items-center"
+              >
+                <img src="images/jason.jpg" />
+                <div class="tweet-heads ms-3 d-flex">
+                  <h4>Jason</h4>
+                  <span>@jason</span>
+                  <span>June 11</span>
+                </div>
+              </div>
+              <div class="tweet-content">
+                <p>This is just a dummy tweet, speaking of dummy.</p>
+                <img src="images/post.jpg" alt="tweet" class="img-fluid" />
+              </div>
+              <div class="tweet-icons">
+                <i class="fa fa-comment" aria-hidden="true"></i>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                <i class="fa fa-retweet" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 right-bar">
+            <div class="search-box">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <input type="text" placeholder="Search Twitter" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"
+      integrity="sha512-ztxZscxb55lKL+xmWGZEbBHekIzy+1qYKHGZTWZYH1GUwxy0hiA18lW6ORIMj4DHRgvmP/qGcvqwEyFFV7OYVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>
+      // Logout button click event
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", function () {
+          // Remove individual session storage items
+          sessionStorage.removeItem("username");
+
+          // Redirect to the login page (or any other desired page)
+          window.location.href = "login.html";
+        });
+    </script>
+    <script>
+      // Retrieve the username from session storage
+      const username = sessionStorage.getItem("username");
+
+      // Display the toast notification with a welcome message
+      Toastify({
+        text: `Welcome, ${username}`,
+        duration: 3000, // Set the duration for the toast (in milliseconds)
+        close: true, // Show a close button on the toast
+        gravity: "top", // Position the toast at the top
+        position: "center", // Position the toast on the right side
+      }).showToast();
+    </script>
+  </body>
+</html>
